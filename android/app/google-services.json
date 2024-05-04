@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969574251969",
+    "project_id": "employify-7f63d",
+    "storage_bucket": "employify-7f63d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969574251969:android:09cb41aefdf8d291030340",
+        "android_client_info": {
+          "package_name": "com.ssproductions.employify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmq-ewvOzC0tLiYH89HbwmgIBn_fh4Y68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
