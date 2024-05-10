@@ -271,6 +271,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                                     duration: const Duration(milliseconds: 500),
                                     curve: Curves.ease,
                                   );
+                                  setState(() {});
                                 },
                                 effect:
                                     smooth_page_indicator.ExpandingDotsEffect(

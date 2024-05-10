@@ -12,6 +12,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:share_plus/share_plus.dart';
 import 'job_description_page_model.dart';
 export 'job_description_page_model.dart';
 
@@ -278,25 +279,91 @@ class _JobDescriptionPageWidgetState extends State<JobDescriptionPageWidget>
                                                                   const AlignmentDirectional(
                                                                       -1.0,
                                                                       -1.0),
-                                                              child: Container(
-                                                                width: 87.0,
-                                                                height: 87.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  color: const Color(
-                                                                      0xFFF9FBFC),
-                                                                  image:
-                                                                      DecorationImage(
-                                                                    fit: BoxFit
-                                                                        .cover,
-                                                                    image: Image
-                                                                        .network(
-                                                                      columnCompanyProfileRecord
-                                                                          .logoUrl,
-                                                                    ).image,
+                                                              child: Padding(
+                                                                padding: const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        115.0,
+                                                                        0.0,
+                                                                        50.0,
+                                                                        0.0),
+                                                                child:
+                                                                    Container(
+                                                                  width: 87.0,
+                                                                  height: 87.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: const Color(
+                                                                        0xFFF9FBFC),
+                                                                    image:
+                                                                        DecorationImage(
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                      image: Image
+                                                                          .network(
+                                                                        columnCompanyProfileRecord
+                                                                            .logoUrl,
+                                                                      ).image,
+                                                                    ),
+                                                                    shape: BoxShape
+                                                                        .circle,
                                                                   ),
-                                                                  shape: BoxShape
-                                                                      .circle,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      -0.94,
+                                                                      -0.39),
+                                                              child: Builder(
+                                                                builder:
+                                                                    (context) =>
+                                                                        Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .all(
+                                                                              10.0),
+                                                                  child:
+                                                                      FlutterFlowIconButton(
+                                                                    borderColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .accent1,
+                                                                    borderRadius:
+                                                                        20.0,
+                                                                    borderWidth:
+                                                                        2.0,
+                                                                    buttonSize:
+                                                                        40.0,
+                                                                    fillColor: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .accent1,
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .share_sharp,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      size:
+                                                                          24.0,
+                                                                    ),
+                                                                    onPressed:
+                                                                        () async {
+                                                                      _model.currentPageLink =
+                                                                          await generateCurrentPageLink(
+                                                                        context,
+                                                                        isShortLink:
+                                                                            false,
+                                                                      );
+
+                                                                      await Share
+                                                                          .share(
+                                                                        _model
+                                                                            .currentPageLink,
+                                                                        sharePositionOrigin:
+                                                                            getWidgetBoundingBox(context),
+                                                                      );
+                                                                    },
+                                                                  ),
                                                                 ),
                                                               ),
                                                             ),

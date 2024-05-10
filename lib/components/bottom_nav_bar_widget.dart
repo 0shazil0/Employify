@@ -391,8 +391,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget>
                       color: Color(0xFFF7FAFC),
                       size: 24.0,
                     ),
-                    onPressed: () async {
-                      Navigator.pop(context);
+                    onPressed: () {
+                      print('CenterIconButton pressed ...');
                     },
                   ),
                 ),
